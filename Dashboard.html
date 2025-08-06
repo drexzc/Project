@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="Dashboard.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li><a href="Dashboard.html" class="nav-link">HOME</a></li>
+        <li><a href="breach.html" class="nav-link">Breach Monitoring</a></li>
+        <li><a href="vulnerability.html" class="nav-link">Vulnerability Assessment</a></li>
+        <li><a href="compliance.html" class="nav-link">Compliance</a></li>
+        <li><a href="phishing.html" class="nav-link">Phishing Simulation</a></li>
+        <li><a href="awareness.html" class="nav-link">Security Awareness</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="top-bar">
+        <div>
+          <h4>Client's Name</h4>
+        </div>
+        <div>
+          <input type="text" placeholder="Search">
+          <button>🔍</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <h4>Breach report</h4>
+        <div class="row user-box-row">
+  <div class="box">Employee</div>
+  <div class="box">Customer</div>
+</div>
+
+        <div class="middle-section">
+          <div class="left-content">
+            <h4>Vulnerability Report</h4>
+
+            <div class="five-box-wrapper">
+              <!-- Top Row with 3 boxes -->
+              <div class="five-box-row top-row">
+                <a href="Vulnerability.html?tab=critical" class="box">
+                  <div class="number">10</div>
+                  <div class="label">Critical</div>
+                </a>
+                <a href="Vulnerability.html?tab=high" class="box">
+                  <div class="number">7</div>
+                  <div class="label">High</div>
+                </a>
+                <a href="Vulnerability.html?tab=medium" class="box">
+                  <div class="number">5</div>
+                  <div class="label">Medium</div>
+                </a>
+              </div>
+
+              <!-- Bottom Row with 2 boxes -->
+              <div class="five-box-row bottom-row">
+                <a href="Vulnerability.html?tab=low" class="box">
+                  <div class="number">3</div>
+                  <div class="label">Low</div>
+                </a>
+                <a href="Vulnerability.html?tab=info" class="box">
+                  <div class="number">8</div>
+                  <div class="label">Info</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="right-side-box">
+            <p>asdadada</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const items = document.querySelectorAll(".sidebar ul li");
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        items.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
